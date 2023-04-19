@@ -1,0 +1,6 @@
+Clinton 1983/02/01 5
+0Trump 1976/1/2 0
+Bush 1976/01/2 3
+Clinton 1976/1/02 5
+Clinton 1976/1/02 3
+Obama 955/7/30 2

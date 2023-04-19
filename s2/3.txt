@@ -1,0 +1,8 @@
+aaaa000100 a aaa 00
+aaaa000 a aa1010100101a 00
+aaaa01023 a aa00a 00
+aaaa0001 a aaa 00
+0000000
+00
+0
+10
