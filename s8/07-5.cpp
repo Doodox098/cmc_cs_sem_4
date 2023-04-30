@@ -5,47 +5,39 @@
 class Figure
 {
 public:
-    virtual ~Figure() {};
-    virtual bool equals(Figure* f2) const = 0;
+    virtual ~Figure() = default;
+    virtual bool equals(const Figure* f2) const = 0;
 };
 
 class Rectangle: public Figure
 {
 private:
-    double a;
-    double b;
+    int a;
+    int b;
 public:
-    Rectangle(const int &h, const int &w) {
-        a = h;
-        b = w;
-    }
-    bool equals(Figure *f2) const override {
-        auto f = dynamic_cast<const Rectangle*>(f2);
+    Rectangle(const int h, const int w) : a(h), b(w) {}
+    bool equals(const Figure *f2) const override {
+        const Rectangle *f = dynamic_cast<const Rectangle*>(f2);
         if (f == nullptr)
             return false;
-        return (this->a == f->a && this->b == f->b);
+        return this->a == f->a && this->b == f->b;
     }
 };
 
 class Triangle: public Figure
 {
 private:
-    double a;
-    double b;
-    double c;
+    int a;
+    int b;    int c;
 public:
-    Triangle(const int &a1, const int &a2, const int &a3) {
-        a = a1;
-        b = a2;
-        c = a3;
-    }
-    bool equals(Figure *f2) const override {
-        auto f = dynamic_cast<const Triangle*>(f2);
+    Triangle(const int a1, const int a2, const int a3) : a(a1), b(a2), c(a3) {}
+    bool equals(const Figure *f2) const override {
+        const Triangle *f = dynamic_cast<const Triangle*>(f2);
         if (f == nullptr)
             return false;
-        return (this->a == f->a
-        && this->b == f->b
-        && this->c == f->c);
+        return this->a == f->a
+            && this->b == f->b
+            && this->c == f->c;
     }
 };
 

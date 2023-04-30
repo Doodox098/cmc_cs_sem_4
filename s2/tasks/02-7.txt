@@ -1,0 +1,15 @@
+Сделайте класс для хранения матрицы размером 3x3, так чтобы работал следующий фрагмент кода:
+
+int main() {
+   Matrix m;
+   m[1, 1] = 5;
+
+   for (const auto &row : m) {
+        for (auto cell : row) {
+            cout << cell << " ";
+        }
+        cout << "\n";
+   }
+}
+Notes
+use c++23 features
